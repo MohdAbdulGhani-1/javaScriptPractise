@@ -24,5 +24,9 @@
 }
 //p3
 {
-    ``
+    function calculateArea(length, width = length){
+        return length*width;
+    }
+    console.log(calculateArea(2,3));
+    console.log(calculateArea(4));
 }
