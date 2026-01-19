@@ -141,6 +141,45 @@ let para = document.querySelector('p');
     desc.insertAdjacentElement('beforebegin', warning);
 
     //e2
+    let icon = document.createElement('span');
+    icon.innerText = "🌍 ";
+    let heading = document.querySelector('h1');
+    heading.insertAdjacentElement('afterbegin', icon);
+
+    //e3
+    let arrow = document.createElement('span');
+    arrow.innerText = " →";
+    let heading2 = document.querySelector('h2');
+    heading2.insertAdjacentElement('beforeend', arrow);
+
+
+}
+
+{
+    let oldImg = document.querySelector('.oldImg');
+    oldImg.remove();
+
+    //e2
+    let imageContainer = document.querySelector('.images');
+    imageContainer.removeChild(oldImg);
+
+    //e3
+    let oldImages = document.querySelectorAll('.oldImg');
+    for (let img of oldImages) {
+    img.remove();
+    }
+
+    //e4
+    let btn = document.querySelector('button');
+    let box = document.querySelector('.box');
+    btn.addEventListener('click', function() {
+    box.remove(); // Box disappears when button is clicked
+    });
+
+    //e5
+    let list = document.querySelector('ul');
+    let firstItem = list.children[0];
+    firstItem.remove();
 }
 
 
